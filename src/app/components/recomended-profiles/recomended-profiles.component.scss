@@ -1,0 +1,28 @@
+.container-recomended-profiles {
+  padding: 0 20px;
+  color: white;
+  margin-top: 25px;
+}
+
+.container-recomended-profiles p {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.flex-profiles {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-profile {
+  border-radius: 50%;
+}
