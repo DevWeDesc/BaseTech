@@ -9,6 +9,10 @@
     "test": "ng test",
     "serve:ssr:base-tech-angular": "node dist/base-tech-angular/server/server.mjs"
   },
+  "styles": [
+    "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+    "src/styles.css"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.0.0",
@@ -16,6 +20,7 @@
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
     "@angular/forms": "^17.0.0",
+    "@angular/material": "^17.0.2",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/platform-server": "^17.0.0",
@@ -23,6 +28,7 @@
     "@angular/ssr": "^17.0.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
+    "swiper": "^11.0.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
