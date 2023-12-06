@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+$bg-input-default: rgba(255, 255, 255, 0.1);
+$bg-input-default-hover: rgba(255, 255, 255, 0.2);
+$bg-button-default: rgba(106, 0, 198, 0.7);
+$bg-button-default-hover: rgba(106, 0, 198, 1);
+$font-size-default: 12px;
+$text-color-default: rgba(255, 255, 255, 0.7);
+$gradient-bg-default: linear-gradient(
+  to bottom,
+  rgba(1, 16, 23, 1),
+  rgba(16, 12, 65, 1)
+);
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: $gradient-bg-default;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input-default {
+  font-size: $font-size-default;
+  background: $bg-input-default;
+  padding: 20px;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  transition: 0.5s;
+  color: white;
+
+  &:hover {
+    background-color: $bg-input-default-hover;
+    &::placeholder {
+      color: #b1b1b1;
+    }
+  }
+
+  &:focus {
+    background-color: $bg-input-default-hover;
+    &::placeholder {
+      color: #b1b1b1;
+    }
+  }
+}
+
+.button-default {
+  width: 100%;
+  font-size: $font-size-default;
+  background: $bg-button-default;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  transition: 0.5s;
+
+  &:hover {
+    background: $bg-button-default-hover;
+  }
+}
