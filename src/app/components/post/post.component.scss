@@ -1,0 +1,35 @@
+.container-post {
+  color: #fff;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.top-post {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.text-info-user {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-post {
+  padding: 0 20px;
+}
