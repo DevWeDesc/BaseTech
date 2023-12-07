@@ -1,45 +1,11 @@
 <div class="container-recomended-profiles">
   <p>Perfis Recomendados</p>
   <div class="flex-profiles">
-    <div class="profile">
-      <img
-        src="../../../assets/images/facebook.svg"
-        class="photo-profile"
-        alt=""
-      />
-      <p>Facebook</p>
-    </div>
-    <div class="profile">
-      <img
-        src="../../../assets/images/facebook.svg"
-        class="photo-profile"
-        alt=""
-      />
-      <p>Facebook</p>
-    </div>
-    <div class="profile">
-      <img
-        src="../../../assets/images/facebook.svg"
-        class="photo-profile"
-        alt=""
-      />
-      <p>Facebook</p>
-    </div>
-    <div class="profile">
-      <img
-        src="../../../assets/images/facebook.svg"
-        class="photo-profile"
-        alt=""
-      />
-      <p>Facebook</p>
-    </div>
-    <div class="profile">
-      <img
-        src="../../../assets/images/facebook.svg"
-        class="photo-profile"
-        alt=""
-      />
-      <p>Facebook</p>
+    <div *ngFor="let user of users" class="profile">
+      <img src="{{ user.image }}" class="photo-profile" alt="" />
+      <p>
+        {{ user.name.length > 10 ? user.name.substring(0, 10) : user.name }}
+      </p>
     </div>
   </div>
   <!-- <app-swipper-recomended-profiles /> -->
