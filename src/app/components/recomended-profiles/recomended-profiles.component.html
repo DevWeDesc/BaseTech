@@ -1,12 +1,16 @@
 <div class="container-recomended-profiles">
   <p>Perfis Recomendados</p>
   <div class="flex-profiles">
-    <div *ngFor="let user of users" class="profile">
+    <a
+      *ngFor="let user of users"
+      href="profileUser/{{ user.id }}"
+      class="profile"
+    >
       <img src="{{ user.image }}" class="photo-profile" alt="" />
       <p>
         {{ user.name.length > 10 ? user.name.substring(0, 10) : user.name }}
       </p>
-    </div>
+    </a>
   </div>
   <!-- <app-swipper-recomended-profiles /> -->
 </div>
