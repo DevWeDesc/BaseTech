@@ -6,4 +6,14 @@
       <p>Influencer</p>
     </div>
   </div>
+  <div class="container-options">
+    <a
+      *ngFor="let option of optionsProfileMock"
+      href="{{ option.href }}"
+      class="option-default-profile"
+    >
+      <p>{{ option.text }}</p>
+      <img src="{{ option.icon }}" alt="" />
+    </a>
+  </div>
 </div>

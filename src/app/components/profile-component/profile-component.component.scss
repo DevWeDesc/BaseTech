@@ -1,9 +1,13 @@
+$bg-option-default: rgba(255, 255, 255, 0.1);
+$bg-option-default-hover: rgba(255, 255, 255, 0.2);
+
 .container-profile {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+  gap: 100px;
 }
 
 .container-users-information {
@@ -27,5 +31,32 @@
   p {
     margin: 0;
     text-align: center;
+  }
+}
+
+.container-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 122px;
+}
+
+.option-default-profile {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin: auto;
+  width: 80%;
+  background-color: $bg-option-default;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $bg-option-default-hover;
   }
 }
