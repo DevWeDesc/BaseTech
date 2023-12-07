@@ -1,0 +1,31 @@
+<div>
+  <div class="container-share-post">
+    <div class="container-info-user">
+      <img src="{{ userInfosMockSharePost.image }}" alt="" />
+      <div class="container-info-text">
+        <strong>{{ userInfosMockSharePost.name }}</strong>
+        <p>{{ userInfosMockSharePost.typeAccont }}</p>
+      </div>
+    </div>
+    <textarea
+      (input)="handleContent($event.target)"
+      [value]="content"
+      class="content-post"
+      name="contentPost"
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="Insira sua descrição"
+    ></textarea>
+    <div>
+      <input id="input-file" type="file" />
+      <label class="label-input-file" for="input-file">
+        <img src="../../../assets/images/cameraIcon.svg" alt="" />
+        <p>Insira sua Imagem</p>
+      </label>
+    </div>
+    <a href="home">
+      <button class="button-default">Postar</button>
+    </a>
+  </div>
+</div>

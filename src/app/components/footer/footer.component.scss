@@ -1,0 +1,13 @@
+$bg-default-footer: #2c2765;
+
+.container-footer {
+  width: 100%;
+  position: fixed;
+  padding: 20px 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  background: $bg-default-footer;
+}

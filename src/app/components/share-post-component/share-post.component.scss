@@ -1,0 +1,55 @@
+$bg-Label-Input: rgba(217, 217, 217, 0.1);
+
+.container-share-post {
+  height: 100dvh;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 12px;
+}
+
+.container-info-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  p {
+    margin: 0;
+  }
+}
+
+.content-post {
+  outline: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  max-height: 20px;
+  border-bottom: 1px solid white;
+  resize: none;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+}
+
+#input-file {
+  visibility: hidden;
+}
+
+.label-input-file {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: $bg-Label-Input;
+}

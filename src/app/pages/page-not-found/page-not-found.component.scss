@@ -1,0 +1,36 @@
+$bg-button-hover: rgba(255, 255, 255, 0.08);
+.container-not-found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 40px;
+    padding: 20px 30px;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+      border: 2px solid red;
+      background-color: $bg-button-hover;
+    }
+  }
+}
+
+.container-text-not-found {
+  p {
+    font-size: 84px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    &:last-child {
+      font-size: 38px;
+    }
+  }
+}
