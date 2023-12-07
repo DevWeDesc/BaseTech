@@ -19,7 +19,5 @@ export class FooterComponent implements OnInit {
       { href: 'newPost', image: 'assets/images/NewPostIcon.svg' },
       { href: 'myaccount', image: 'assets/images/userIcon.svg' },
     ];
-
-    console.log(this.iconData);
   }
 }
