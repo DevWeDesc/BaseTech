@@ -1,37 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { ContainerProfileUserComponent } from '../../container-profile-user/container-profile-user.component';
+import { optionsProfileMockType } from '../../types/optionsProfileMock';
+import { GetOptionsProfileService } from '../../Services/get-options-profile.service';
+import { GetUsersService } from '../../Services/get-users.service';
+import { userType } from '../../types/userType';
+import { Observable } from 'rxjs';
 
-type optionsProfileMockType = {
-  href: string;
-  text: string;
-  icon: string;
-};
 @Component({
   selector: 'app-profile-component',
   standalone: true,
-  imports: [NgFor],
   templateUrl: './profile-component.component.html',
   styleUrl: './profile-component.component.scss',
+  imports: [NgFor, ContainerProfileUserComponent],
 })
 export class ProfileComponentComponent implements OnInit {
+  constructor(
+    private OptionsMockService: GetOptionsProfileService,
+    private GetUsersServiceMock: GetUsersService
+  ) {}
+
   optionsProfileMock: optionsProfileMockType[] = [];
+  profileUser: userType | undefined = {
+    id: 0,
+    name: '',
+    image: '',
+    typeAccont: '',
+  };
+
   ngOnInit() {
-    this.optionsProfileMock = [
-      {
-        href: '',
-        text: 'Detalhes da Conta',
-        icon: '../../../assets/images/book-open.svg',
-      },
-      {
-        href: '',
-        text: 'Editar dados Pessoais',
-        icon: '../../../assets/images/edit.svg',
-      },
-      {
-        href: '/',
-        text: 'Sair dessa Conta',
-        icon: '../../../assets/images/log-out.svg',
-      },
-    ];
+    this.OptionsMockService.getOptionsProfile()
+      .pipe()
+      .subscribe((option) => {
+        this.optionsProfileMock = option;
+      });
+    this.GetUsersServiceMock.getUserForId(1)
+      .pipe()
+      .subscribe((user) => {
+        this.profileUser = user;
+      });
   }
 }
