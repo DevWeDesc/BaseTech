@@ -6,6 +6,7 @@ import { CreateAccountPage } from './pages/create-account/create-account.compone
 import { UserProfilePage } from './pages/user-profile/user-profile.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UserProfileDetailsPage } from './pages/user-profile-details/user-profile-details.component';
+import { ExplorerComponent } from './components/explorer/explorer.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPage },
@@ -14,6 +15,6 @@ export const routes: Routes = [
   { path: 'newPost', component: NewPostPage },
   { path: 'myaccount', component: UserProfilePage },
   { path: 'profileUser/:id', component: UserProfileDetailsPage },
+  { path: 'search', component: ExplorerComponent },
   { path: '**', component: PageNotFoundComponent },
-  // {path: "search", component: }
 ];
