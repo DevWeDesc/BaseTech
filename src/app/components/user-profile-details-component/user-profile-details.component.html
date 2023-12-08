@@ -1,2 +1,21 @@
-<app-header />
-<app-footer />
+<div class="container-profile-user">
+  <app-container-profile-user [infoUser]="userSelected" />
+  <div class="container-options">
+    <div (click)="handleVisibilityPosts()" class="option-default-profile">
+      <p>Visualizar postagens</p>
+      <img src="../../../assets/images/eye.svg" alt="" />
+    </div>
+    <div class="posts-user-profile" *ngIf="postVisible">
+      <img
+        class="image-posts-user"
+        *ngFor="let post of userSelected?.posts"
+        src="{{ post.image }}"
+        alt=""
+      />
+    </div>
+    <div class="option-default-profile">
+      <p>Começar a Seguir</p>
+      <img src="../../../assets/images/chevron-right.svg" alt="" />
+    </div>
+  </div>
+</div>
