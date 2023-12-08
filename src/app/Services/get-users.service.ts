@@ -169,13 +169,12 @@ export class GetUsersService {
 
   getUserForId(id: number): Observable<userType | undefined> {
     const userMockForID = this.usersMock.find((user) => user.id == id);
-    console.log(`User for ID: ${userMockForID}`);
-    if (userMockForID !== undefined) {
+    if (userMockForID) {
       console.log(`User for ID: ${userMockForID}`);
       return of(userMockForID);
     } else {
       console.log(`User not found for ID: ${id}`);
-      return EMPTY; // or you can return of(undefined) if you prefer
+      return EMPTY;
     }
   }
 }
