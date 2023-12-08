@@ -6,7 +6,7 @@ export type userType = {
   posts?: PostType[];
 };
 
-type PostType = {
+export type PostType = {
   id: number;
   image: string;
   content: string;
