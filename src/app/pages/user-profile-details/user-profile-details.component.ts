@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileDetailsComponent } from '../../components/user-profile-details-component/user-profile-details.component';
 import { GetUsersService } from '../../Services/get-users.service';
-import { userType } from '../../types/userType';
+import { userType } from '../../models/userType';
 import { ActivatedRoute } from '@angular/router';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+import { HeaderComponent } from '../../components/header-component/header.component';
+import { FooterComponent } from '../../components/footer-component/footer.component';
 
 @Component({
   selector: 'app-user-profile-details',
   standalone: true,
-  templateUrl: './user-profile-details.component.html',
+  template: `
+    <app-header />
+    <app-user-profile-details-component [userSelected]="userSelected" />
+    <app-footer />
+  `,
   imports: [UserProfileDetailsComponent, HeaderComponent, FooterComponent],
 })
 export class UserProfileDetailsPage implements OnInit {
@@ -23,6 +27,7 @@ export class UserProfileDetailsPage implements OnInit {
     image: '',
     name: '',
     typeAccont: '',
+    posts: [],
   };
 
   id: string | null | number = this.route.snapshot.paramMap.get('id');

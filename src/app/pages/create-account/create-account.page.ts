@@ -4,7 +4,7 @@ import { CreateAcountComponent } from '../../components/create-acount-component/
 @Component({
   selector: 'app-create-account',
   standalone: true,
-  templateUrl: './create-account.component.html',
+  template: ` <app-create-acount /> `,
   imports: [CreateAcountComponent],
 })
 export class CreateAccountPage {}

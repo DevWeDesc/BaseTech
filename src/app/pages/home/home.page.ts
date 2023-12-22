@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
+import { HeaderComponent } from '../../components/header-component/header.component';
 import { RecomendedProfilesComponent } from '../../components/recomended-profiles/recomended-profiles.component';
 import { PostComponent } from '../../components/post-component/post.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { userType } from '../../types/userType';
+import { FooterComponent } from '../../components/footer-component/footer.component';
+import { userType } from '../../models/userType';
 import { GetUsersService } from '../../Services/get-users.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  templateUrl: './home.component.html',
+  template: `
+    <div>
+      <app-header />
+      <app-recomended-profiles [users]="usersList" />
+      <app-post />
+      <app-footer />
+    </div>
+  `,
   imports: [
     HeaderComponent,
     RecomendedProfilesComponent,

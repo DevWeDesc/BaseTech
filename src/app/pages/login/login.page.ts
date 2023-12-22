@@ -4,7 +4,7 @@ import { LoginComponent } from '../../components/login-component/login.component
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  templateUrl: './login.component.html',
+  template: ` <app-login /> `,
   imports: [LoginComponent],
 })
 export class LoginPage {}
