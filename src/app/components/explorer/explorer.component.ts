@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GetUsersService } from '../../Services/get-users.service';
-import { userType } from '../../types/userType';
+import { PostType, userType } from '../../models/userType';
 import { NgFor } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header-component/header.component';
+import { FooterComponent } from '../footer-component/footer.component';
 
 @Component({
   selector: 'app-explorer',
@@ -15,6 +15,7 @@ import { FooterComponent } from '../footer/footer.component';
 export class ExplorerComponent implements OnInit {
   constructor(private usersPostMock: GetUsersService) {}
   usersPosts: userType[] = [];
+  usersPostFormated: PostType[] = [];
 
   ngOnInit() {
     this.usersPostMock
@@ -23,5 +24,12 @@ export class ExplorerComponent implements OnInit {
       .subscribe((user) => {
         this.usersPosts = user;
       });
+
+    for (let user of this.usersPosts) {
+      for (let post of user.posts) {
+        this.usersPostFormated.push(post);
+      }
+    }
+    console.log(this.usersPostFormated);
   }
 }

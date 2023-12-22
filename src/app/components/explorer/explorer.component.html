@@ -1,9 +1,12 @@
 <app-header />
 <div class="container-explorer">
-  <div *ngFor="let user of usersPosts" class="posts-user">
-    <div *ngFor="let userPost of user.posts">
-      <img src="{{ userPost?.image }}" alt="" />
-    </div>
+  <div class="posts-user">
+    <a
+      *ngFor="let post of usersPostFormated"
+      href="user/{{ post.idUser }}/post/{{ post.id }}"
+    >
+      <img src="{{ post?.image }}" alt="" />
+    </a>
   </div>
 </div>
 <app-footer />
