@@ -3,11 +3,12 @@ export type userType = {
   image: string;
   name: string;
   typeAccont: string;
-  posts?: PostType[];
+  posts: PostType[];
 };
 
 export type PostType = {
   id: number;
+  idUser: number;
   image: string;
   content: string;
   coments: ComentsType[];
@@ -15,6 +16,7 @@ export type PostType = {
 
 type ComentsType = {
   id: number;
+  idUser: number;
   accont: string;
   content: string;
 };
