@@ -1,0 +1,25 @@
+<div class="container-post-details">
+  <div class="container-top">
+    <a href="profileUser/{{ User?.id }}">
+      <div class="container-user-informations">
+        <img src="{{ User?.image }}" alt="" />
+        <div class="user-informations">
+          <strong>{{ User?.name }}</strong>
+          <p>{{ User?.typeAccont }}</p>
+        </div>
+      </div>
+    </a>
+    <p>{{ Post?.content }}</p>
+  </div>
+  <img class="image-post" src="{{ Post?.image }}" alt="" />
+  <div class="footer-post">
+    <a
+      href="profileUser/{{ coment.idUser }}"
+      *ngFor="let coment of Post?.coments"
+    >
+      <p>
+        <strong>{{ coment.accont }}</strong> {{ coment.content }}
+      </p>
+    </a>
+  </div>
+</div>
