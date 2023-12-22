@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { ContainerProfileUserComponent } from '../../container-profile-user/container-profile-user.component';
-import { optionsProfileMockType } from '../../types/optionsProfileMock';
+import { ContainerProfileUserComponent } from '../container-profile-user/container-profile-user.component';
+import { optionsProfileMockType } from '../../models/optionsProfileMock';
 import { GetOptionsProfileService } from '../../Services/get-options-profile.service';
 import { GetUsersService } from '../../Services/get-users.service';
-import { userType } from '../../types/userType';
+import { userType } from '../../models/userType';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -26,6 +26,7 @@ export class ProfileComponentComponent implements OnInit {
     name: '',
     image: '',
     typeAccont: '',
+    posts: [],
   };
 
   ngOnInit() {

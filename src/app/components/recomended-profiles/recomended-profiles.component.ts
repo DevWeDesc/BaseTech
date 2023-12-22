@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SwipperRecomendedProfilesComponent } from '../swipper-recomended-profiles/swipper-recomended-profiles.component';
-import { userType } from '../../types/userType';
+import { userType } from '../../models/userType';
 import { NgFor } from '@angular/common';
 
 @Component({

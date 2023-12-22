@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
-import { RecomendedProfilesType } from '../../types/recomended-profiles';
+import { RecomendedProfilesType } from '../../models/recomended-profiles';
 register();
 @Component({
   selector: 'app-swipper-recomended-profiles',

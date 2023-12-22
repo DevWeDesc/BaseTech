@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
-import { userType } from '../../types/userType';
-import { ContainerProfileUserComponent } from '../../container-profile-user/container-profile-user.component';
+import { HeaderComponent } from '../header-component/header.component';
+import { FooterComponent } from '../footer-component/footer.component';
+import { userType } from '../../models/userType';
+import { ContainerProfileUserComponent } from '../container-profile-user/container-profile-user.component';
 import { NgIf, NgFor } from '@angular/common';
 @Component({
   selector: 'app-user-profile-details-component',

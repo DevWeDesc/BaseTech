@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { userType } from '../../types/userType';
+import { userType } from '../../models/userType';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -22,5 +22,6 @@ export class SharePostComponent {
     image: '../../../assets/images/facebook.svg',
     name: 'Facebook',
     typeAccont: 'Influencer',
+    posts: [],
   };
 }
