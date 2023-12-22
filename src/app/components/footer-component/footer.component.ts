@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
-import { IconMockType } from '../../types/iconMockType';
+import { IconMockType } from '../../models/iconMockType';
 
 @Component({
   selector: 'app-footer',
