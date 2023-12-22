@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { userType } from '../types/userType';
+import { userType } from '../../models/userType';
 
 @Component({
   selector: 'app-container-profile-user',
@@ -14,5 +14,6 @@ export class ContainerProfileUserComponent {
     image: '',
     name: '',
     typeAccont: '',
+    posts: [],
   };
 }
