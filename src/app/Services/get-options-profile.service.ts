@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { optionsProfileMockType } from '../types/optionsProfileMock';
+import { optionsProfileMockType } from '../models/optionsProfileMock';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
